@@ -5,8 +5,8 @@ namespace ExceptionTest
 {
     public class Plugin : ICommandAndViewPlugin
     {
-        public Command Command { get; } = new ExceptionTestCommand();
-        public ICommandView CommandView { get; } = new CommandView();
+        public Type Command { get; } = typeof (ExceptionTestCommand);
+        public Type CommandView { get; } = typeof (CommandView);
         public Type View { get; } = typeof (ExceptionTestView);
     }
 }
